@@ -1,6 +1,7 @@
 package core
 
 import (
+	"fmt"
 	"github.com/afl-lxw/gin-trend/initialize"
 	"time"
 )
@@ -15,5 +16,5 @@ func RunServer() {
 	s := initServer("8888", Router)
 	time.Sleep(10 * time.Microsecond)
 
-	s.ListenAndServe()
+	fmt.Println(s.ListenAndServe().Error())
 }
