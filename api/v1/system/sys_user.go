@@ -6,6 +6,7 @@ import (
 )
 
 func (b *CapApi) Login(c *gin.Context) {
+	println("进入接口")
 	err := systemUserConfigService.HandleSystemUser()
 	if err != nil {
 
