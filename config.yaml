@@ -74,7 +74,6 @@ captcha:
   open-captcha-timeout: 3600 # open-captcha大于0时才生效
 
 # mysql connect configuration
-# 未初始化之前请勿手动修改数据库信息！！！如果一定要手动初始化请看（https://gin-vue-admin.com/docs/first_master）
 mysql:
   path: ""
   port: ""
@@ -87,8 +86,6 @@ mysql:
   log-mode: ""
   log-zap: false
 
-# pgsql connect configuration
-# 未初始化之前请勿手动修改数据库信息！！！如果一定要手动初始化请看（https://gin-vue-admin.com/docs/first_master）
 pgsql:
   path: ""
   port: ""
