@@ -11,15 +11,9 @@ func Routers() *gin.Engine {
 	Router := gin.New()
 	Router.Use(gin.Recovery())
 	Router.Use(gin.Logger())
-	Router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "hello World!")
-	})
 	//InstallPlugin(Router) // 安装插件
-	//systemRouter := router.RouterGroupApp.System
-
 	PublicGroup := Router.Group(global.GVA_CONFIG.System.RouterPrefix)
-
-	//PrivateGroup := Router.Group(global.GVA_CONFIG.System.RouterPrefix)
+	Router.StaticFS(global.GVA_CONFIG.Local.StorePath, http.Dir(global.GVA_CONFIG.Local.StorePath)) // 为用户头像和文件提供静态地址
 	//PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
 	systemRouter := router.RouterGroupApp.System
 
