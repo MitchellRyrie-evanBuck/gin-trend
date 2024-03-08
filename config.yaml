@@ -75,12 +75,12 @@ captcha:
 
 # mysql connect configuration
 mysql:
-  path: ""
-  port: ""
+  path: "127.0.0.1"
+  port: "3306"
   config: ""
-  db-name: ""
-  username: ""
-  password: ""
+  db-name: "go_trend"
+  username: "root"
+  password: "809000liuLIU"
   max-idle-conns: 10
   max-open-conns: 100
   log-mode: ""
