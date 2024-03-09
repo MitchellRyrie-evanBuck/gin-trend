@@ -1,0 +1,6 @@
+[https://github.com/afl-lxw/gin-trend]2024/03/09 - 15:48:29.854	[31merror[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/gorm_mysql.go:26	driver: bad connection
+[https://github.com/afl-lxw/gin-trend]2024/03/09 - 15:51:19.662	[31merror[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/gorm_mysql.go:26	driver: bad connection
+[https://github.com/afl-lxw/gin-trend]2024/03/09 - 17:03:57.533	[31merror[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/gorm_mysql.go:26	driver: bad connection
+[https://github.com/afl-lxw/gin-trend]2024/03/09 - 17:06:29.789	[31merror[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/gorm_mysql.go:26	driver: bad connection
+[https://github.com/afl-lxw/gin-trend]2024/03/09 - 17:07:05.737	[31merror[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/gorm_mysql.go:26	driver: bad connection
+[https://github.com/afl-lxw/gin-trend]2024/03/09 - 17:40:28.070	[31merror[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/gorm_mysql.go:26	driver: bad connection
