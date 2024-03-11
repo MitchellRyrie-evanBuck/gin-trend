@@ -14,6 +14,11 @@ type server interface {
 }
 
 func RunServer() {
+	if global.GVA_CONFIG.System.UseMultipoint || global.GVA_CONFIG.System.UseRedis {
+		// 初始化redis服务
+		initialize.Redis()
+	}
+
 	Router := initialize.Routers()
 	//address := fmt.Sprintf(":%d", global.GVA_CONFIG.System.Addr)
 	address := fmt.Sprintf(":%d", global.GVA_CONFIG.System.Addr)

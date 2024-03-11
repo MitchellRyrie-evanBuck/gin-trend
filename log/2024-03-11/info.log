@@ -1,0 +1,3 @@
+[https://github.com/afl-lxw/gin-trend]2024/03/11 - 11:33:09.423	[34minfo[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/core/server.go:24	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/11 - 17:56:12.572	[34minfo[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/11 - 17:56:12.575	[34minfo[0m	/Users/liuxiaowen/Documents/Golang/gin-trend/core/server.go:29	server run success on 	{"address": ":8888"}
