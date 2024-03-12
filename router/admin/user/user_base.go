@@ -10,7 +10,7 @@ type BaseUserRouter struct {
 
 func (b *BaseUserRouter) InitBaseRouter(Router *gin.RouterGroup) (R gin.IRoutes) {
 	baseRouter := Router.Group("trend")
-	baseUserApi := v1.ApiGroupApp.UserApiGroup.BaseUserApi
+	baseUserApi := v1.ApiGroupAdmin.UserApiGroup.BaseUserApi
 	{
 		baseRouter.POST("user", baseUserApi.UserCreatedAPIFn)
 		baseRouter.PUT("user", baseUserApi.UserUpdateAPIFn)

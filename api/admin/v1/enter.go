@@ -10,4 +10,4 @@ type ApiGroup struct {
 	UserApiGroup   user.ApiGroup
 }
 
-var ApiGroupApp = new(ApiGroup)
+var ApiGroupAdmin = new(ApiGroup)
