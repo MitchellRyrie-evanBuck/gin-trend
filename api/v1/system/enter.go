@@ -8,5 +8,5 @@ type ApiGroup struct {
 }
 
 var (
-	systemUserConfigService = service.ServiceGroupApp.SystemServiceGroup.SystemUserConfigService
+	configSystemUserService = service.ServiceGroupApp.SystemServiceGroup.BaseSystemUserConfigService
 )

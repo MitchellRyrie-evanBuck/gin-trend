@@ -5,7 +5,6 @@ type Mysql struct {
 }
 
 func (m *Mysql) Dsn() string {
-	println(m.Username + ":" + m.Password + "@tcp(" + m.Path + ":" + m.Port + ")/" + m.Dbname + "?" + m.Config)
 	return m.Username + ":" + m.Password + "@tcp(" + m.Path + ":" + m.Port + ")/" + m.Dbname + "?" + m.Config
 }
 

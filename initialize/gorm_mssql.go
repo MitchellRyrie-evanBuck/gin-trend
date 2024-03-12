@@ -11,7 +11,7 @@ import (
 // GormMssql 初始化Mssql数据库
 // Author [LouisZhang](191180776@qq.com)
 func GormMssql() *gorm.DB {
-	m := global.GVA_CONFIG.Mssql
+	m := global.TREND_CONFIG.Mssql
 	if m.Dbname == "" {
 		return nil
 	}

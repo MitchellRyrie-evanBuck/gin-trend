@@ -1,8 +1,8 @@
 package system
 
-type SystemUserConfigService struct {
+type BaseSystemUserConfigService struct {
 }
 
-func (s *SystemUserConfigService) HandleSystemUser() (err error) {
+func (s *BaseSystemUserConfigService) HandleSystemUser() (err error) {
 	return err
 }

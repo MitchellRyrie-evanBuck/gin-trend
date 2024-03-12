@@ -13,7 +13,7 @@ import (
 // Author [piexlmax](https://github.com/piexlmax)
 // Author [SliverHorn](https://github.com/SliverHorn)
 func GormMysql() *gorm.DB {
-	m := global.GVA_CONFIG.Mysql
+	m := global.TREND_CONFIG.Mysql
 	if m.Dbname == "" {
 		return nil
 	}
@@ -23,7 +23,7 @@ func GormMysql() *gorm.DB {
 		SkipInitializeWithVersion: false,   // 根据版本自动配置
 	}
 	if db, err := gorm.Open(mysql.New(mysqlConfig), internal.Gorm.Config(m.Prefix, m.Singular)); err != nil {
-		global.GVA_LOG.Error(err.Error())
+		global.TREND_LOG.Error(err.Error())
 		return nil
 	} else {
 		db.InstanceSet("gorm:table_options", "ENGINE="+m.Engine)
