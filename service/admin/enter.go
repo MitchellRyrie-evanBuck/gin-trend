@@ -1,8 +1,8 @@
-package service
+package admin
 
 import (
-	"github.com/afl-lxw/gin-trend/service/system"
-	"github.com/afl-lxw/gin-trend/service/user"
+	"github.com/afl-lxw/gin-trend/service/admin/system"
+	"github.com/afl-lxw/gin-trend/service/admin/user"
 )
 
 type ServiceGroup struct {

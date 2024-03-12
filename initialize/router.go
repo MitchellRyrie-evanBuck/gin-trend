@@ -3,7 +3,7 @@ package initialize
 import (
 	"github.com/afl-lxw/gin-trend/docs"
 	"github.com/afl-lxw/gin-trend/global"
-	"github.com/afl-lxw/gin-trend/router"
+	"github.com/afl-lxw/gin-trend/router/admin"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -41,8 +41,8 @@ func Routers() *gin.Engine {
 	Router.GET(global.TREND_CONFIG.System.RouterPrefix+"/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	global.TREND_LOG.Info("register swagger handler")
 	// 方便统一添加路由组前缀 多服务器上线使用
-	systemRouter := router.RouterGroupApp.System
-	userRouter := router.RouterGroupApp.User
+	systemRouter := admin.RouterGroupApp.System
+	userRouter := admin.RouterGroupApp.User
 
 	PublicGroup := Router.Group(global.TREND_CONFIG.System.RouterPrefix)
 	//PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())

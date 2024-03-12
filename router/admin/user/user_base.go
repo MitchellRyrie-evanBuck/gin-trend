@@ -1,7 +1,7 @@
 package user
 
 import (
-	v1 "github.com/afl-lxw/gin-trend/api/v1"
+	"github.com/afl-lxw/gin-trend/api/admin/v1"
 	"github.com/gin-gonic/gin"
 )
 
