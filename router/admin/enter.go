@@ -10,4 +10,4 @@ type RouterGroup struct {
 	User   user.RouterGroup
 }
 
-var RouterGroupApp = new(RouterGroup)
+//var RouterGroupApp = new(RouterGroup)

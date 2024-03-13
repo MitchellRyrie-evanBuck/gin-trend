@@ -10,4 +10,4 @@ type ServiceGroup struct {
 	UserServiceGroup   user.ServiceGroup
 }
 
-var ServiceGroupApp = new(ServiceGroup)
+//var ServiceGroupApp = new(ServiceGroup)

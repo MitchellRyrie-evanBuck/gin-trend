@@ -1,7 +1,7 @@
 package system
 
 import (
-	"github.com/afl-lxw/gin-trend/service/admin"
+	"github.com/afl-lxw/gin-trend/service"
 )
 
 type ApiGroup struct {
@@ -10,5 +10,5 @@ type ApiGroup struct {
 }
 
 var (
-	configSystemUserService = admin.ServiceGroupApp.SystemServiceGroup.BaseSystemUserConfigService
+	configSystemUserService = service.ExportServiceConfig.Admin.SystemServiceGroup.BaseSystemUserConfigService
 )
