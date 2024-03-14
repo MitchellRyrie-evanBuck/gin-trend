@@ -14,7 +14,7 @@ import (
 
 var (
 	TREND_DB     *gorm.DB
-	TREND_DBList map[string]*gorm.DB
+	Trend_DBLIST map[string]*gorm.DB
 	TREND_REDIS  *redis.Client
 	TREND_MONGO  *qmgo.QmgoClient
 	TREND_CONFIG config.Server
@@ -32,14 +32,14 @@ var (
 func GetGlobalDBByDBName(dbname string) *gorm.DB {
 	lock.RLock()
 	defer lock.RUnlock()
-	return TREND_DBList[dbname]
+	return Trend_DBLIST[dbname]
 }
 
 // MustGetGlobalDBByDBName 通过名称获取db 如果不存在则panic
 func MustGetGlobalDBByDBName(dbname string) *gorm.DB {
 	lock.RLock()
 	defer lock.RUnlock()
-	db, ok := TREND_DBList[dbname]
+	db, ok := Trend_DBLIST[dbname]
 	if !ok || db == nil {
 		panic("db no init")
 	}

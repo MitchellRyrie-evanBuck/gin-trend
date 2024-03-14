@@ -32,5 +32,5 @@ func DBList() {
 	if sysDB, ok := dbMap[sys]; ok {
 		global.TREND_DB = sysDB
 	}
-	global.TREND_DBList = dbMap
+	global.Trend_DBLIST = dbMap
 }
