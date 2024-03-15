@@ -2,10 +2,10 @@
 
 # jwt configuration
 jwt:
-  signing-key: qmPlus
+  signing-key: trend-secret-key
   expires-time: 7d
   buffer-time: 1d
-  issuer: qmPlus
+  issuer: trend
 # zap logger configuration
 zap:
   level: info
