@@ -1,0 +1,1 @@
+[https://github.com/afl-lxw/gin-trend]2024/03/16 - 23:59:47.412	[31merror[0m	E:/Golang/gin-trend/initialize/gorm.go:57	register table failed	{"error": "Error 1170 (42000): BLOB/TEXT column 'uuid' used in key specification without a key length"}

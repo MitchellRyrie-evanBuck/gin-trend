@@ -1,11 +1,14 @@
 package initialize
 
 import (
+	"fmt"
+	"github.com/afl-lxw/gin-trend/utils"
+	"log"
 	"os"
 
 	"github.com/afl-lxw/gin-trend/global"
 	//"github.com/afl-lxw/gin-trend/model/example"
-	//"github.com/afl-lxw/gin-trend/model/system"
+	"github.com/afl-lxw/gin-trend/model/admin/system"
 
 	"go.uber.org/zap"
 	"gorm.io/gorm"
@@ -31,30 +34,49 @@ func Gorm() *gorm.DB {
 func RegisterTables() {
 	db := global.TREND_DB
 	err := db.AutoMigrate(
+		system.SysUser{},
 
-	//system.SysApi{},
-	//system.SysUser{},
-	//system.SysBaseMenu{},
-	//system.JwtBlacklist{},
-	//system.SysAuthority{},
-	//system.SysDictionary{},
-	//system.SysOperationRecord{},
-	//system.SysAutoCodeHistory{},
-	//system.SysDictionaryDetail{},
-	//system.SysBaseMenuParameter{},
-	//system.SysBaseMenuBtn{},
-	//system.SysAuthorityBtn{},
-	//system.SysAutoCode{},
-	//system.SysExportTemplate{},
-	//
-	//example.ExaFile{},
-	//example.ExaCustomer{},
-	//example.ExaFileChunk{},
-	//example.ExaFileUploadAndDownload{},
+		//system.SysApi{},
+		//system.SysUser{},
+		//system.SysBaseMenu{},
+		//system.JwtBlacklist{},
+		//system.SysAuthority{},
+		//system.SysDictionary{},
+		//system.SysOperationRecord{},
+		//system.SysAutoCodeHistory{},
+		//system.SysDictionaryDetail{},
+		//system.SysBaseMenuParameter{},
+		//system.SysBaseMenuBtn{},
+		//system.SysAuthorityBtn{},
+		//system.SysAutoCode{},
+		//system.SysExportTemplate{},
+		//
+		//example.ExaFile{},
+		//example.ExaCustomer{},
+		//example.ExaFileChunk{},
+		//example.ExaFileUploadAndDownload{},
 	)
 	if err != nil {
 		global.TREND_LOG.Error("register table failed", zap.Error(err))
 		os.Exit(0)
 	}
 	global.TREND_LOG.Info("register table success")
+}
+
+func CheckTables() {
+	db := global.TREND_DB
+	// 检查表是否存在
+	tableName := "areas"
+	exists := utils.CheckTableExists(db, tableName)
+
+	if exists {
+		fmt.Printf("Table '%s' exists.\n", tableName)
+	} else {
+		fmt.Printf("Table '%s' does not exist. Importing SQL file...\n", tableName)
+		// 导入 SQL 文件
+		if err := utils.ImportSQLFile(db, "areas.sql"); err != nil {
+			log.Fatal("Failed to import SQL file:", err)
+		}
+		fmt.Println("SQL file imported successfully.")
+	}
 }

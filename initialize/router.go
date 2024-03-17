@@ -3,6 +3,7 @@ package initialize
 import (
 	"github.com/afl-lxw/gin-trend/docs"
 	"github.com/afl-lxw/gin-trend/global"
+	"github.com/afl-lxw/gin-trend/middleware"
 	"github.com/afl-lxw/gin-trend/router"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
@@ -41,18 +42,32 @@ func Routers() *gin.Engine {
 	Router.GET(global.TREND_CONFIG.System.RouterPrefix+"/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	global.TREND_LOG.Info("register swagger handler")
 	// 方便统一添加路由组前缀 多服务器上线使用
-	systemRouter := router.RouteGroupApp.Admin.System.BaseRouter
-	userRouter := router.RouteGroupApp.Admin.User
+	//----------------------------ADMIN---------------------------------------------
+	adminSystemRouter := router.RouteGroupApp.Admin.System.BaseRouter
+	adminUserRouter := router.RouteGroupApp.Admin.User
+	//----------------------------APP---------------------------------------------
+	appSystemRouter := router.RouteGroupApp.App.System.BaseSystemRouter
+	//----------------------------------------------------------------------------
 
 	PublicGroup := Router.Group(global.TREND_CONFIG.System.RouterPrefix)
-	//PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
+	PrivateGroup := Router.Group(global.TREND_CONFIG.System.RouterPrefix)
 	//systemRouter.InitApiRouter(PrivateGroup, PublicGroup)
 	{
-		systemRouter.InitBaseRouter(PublicGroup) // 注册基础功能路由 不做鉴权
-		//systemRouter.InitInitRouter(PublicGroup) // 自动初始化相关
+		// 健康监测
+		PublicGroup.GET("/test", func(c *gin.Context) {
+			c.JSON(http.StatusOK, "ok")
+		})
 	}
 	{
-		userRouter.InitBaseRouter(PublicGroup)
+		adminSystemRouter.InitBaseRouter(PublicGroup) // 注册基础功能路由 不做鉴权
+		// -----------------------------------------
+		appSystemRouter.InitBaseRouter(PublicGroup)
+	}
+
+	PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
+	{
+		adminUserRouter.InitBaseRouter(PrivateGroup)
+		// -----------------------------------------
 	}
 	return Router
 }

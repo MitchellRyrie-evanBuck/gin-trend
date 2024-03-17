@@ -1,6 +1,7 @@
 package main
 
 import (
+	"database/sql"
 	"github.com/afl-lxw/gin-trend/core"
 	"github.com/afl-lxw/gin-trend/global"
 	"github.com/afl-lxw/gin-trend/initialize"
@@ -21,6 +22,18 @@ func main() {
 	zap.ReplaceGlobals(global.TREND_LOG)
 	global.TREND_DB = initialize.Gorm() // gorm连接数据库
 	initialize.Timer()
-	//initialize.DBList()
+	initialize.DBList()
+	if global.TREND_DB != nil {
+		initialize.RegisterTables() // 初始化表
+		initialize.CheckTables()
+		// 程序结束前关闭数据库链接
+		db, _ := global.TREND_DB.DB()
+		defer func(db *sql.DB) {
+			err := db.Close()
+			if err != nil {
+
+			}
+		}(db)
+	}
 	core.RunServer()
 }

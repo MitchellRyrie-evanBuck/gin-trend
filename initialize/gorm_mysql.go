@@ -32,6 +32,7 @@ func GormMysql() *gorm.DB {
 		sqlDB.SetMaxOpenConns(m.MaxOpenConns)
 		return db
 	}
+
 }
 
 // GormMysqlByConfig 初始化Mysql数据库用过传入配置
