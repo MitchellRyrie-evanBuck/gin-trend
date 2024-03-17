@@ -37,6 +37,7 @@ func RunServer() {
 	s := initServer(address, Router)
 
 	time.Sleep(10 * time.Microsecond)
+
 	fmt.Println(banner.Inline("welcome to GO Trend."))
 	global.TREND_LOG.Info("server run success on ", zap.String("address", address))
 	fmt.Printf(`

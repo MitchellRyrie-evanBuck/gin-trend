@@ -48,3 +48,27 @@
 [https://github.com/afl-lxw/gin-trend]2024/03/17 - 17:48:30.487	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
 [https://github.com/afl-lxw/gin-trend]2024/03/17 - 17:48:30.488	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
 [https://github.com/afl-lxw/gin-trend]2024/03/17 - 17:48:30.495	[34minfo[0m	E:/Golang/gin-trend/core/server.go:41	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:11:17.502	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:11:17.576	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:11:17.578	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:11:17.591	[34minfo[0m	E:/Golang/gin-trend/core/server.go:41	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:12:02.398	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:12:02.475	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:12:02.478	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:12:02.490	[34minfo[0m	E:/Golang/gin-trend/core/server.go:41	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:13:53.970	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:13:54.043	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:13:54.045	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:13:54.051	[34minfo[0m	E:/Golang/gin-trend/core/server.go:41	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:18:22.857	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:18:22.932	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:18:22.933	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:18:22.945	[34minfo[0m	E:/Golang/gin-trend/core/server.go:56	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:53:31.593	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:53:31.671	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:53:31.672	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 21:53:31.680	[34minfo[0m	E:/Golang/gin-trend/core/server.go:58	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 22:51:14.513	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 22:51:14.590	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 22:51:14.591	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/17 - 22:51:14.599	[34minfo[0m	E:/Golang/gin-trend/core/server.go:42	server run success on 	{"address": ":8888"}
