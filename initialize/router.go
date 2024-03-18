@@ -47,6 +47,8 @@ func Routers() *gin.Engine {
 	adminUserRouter := router.RouteGroupApp.Admin.User
 	//----------------------------APP---------------------------------------------
 	appSystemRouter := router.RouteGroupApp.App.System.BaseSystemRouter
+	appWeChatRouter := router.RouteGroupApp.App.Wechat.BaseWeChatRouter
+
 	//----------------------------------------------------------------------------
 
 	PublicGroup := Router.Group(global.TREND_CONFIG.System.RouterPrefix)
@@ -62,6 +64,7 @@ func Routers() *gin.Engine {
 		adminSystemRouter.InitBaseRouter(PublicGroup) // 注册基础功能路由 不做鉴权
 		// -----------------------------------------
 		appSystemRouter.InitBaseRouter(PublicGroup)
+		appWeChatRouter.InitBaseRouter(PublicGroup)
 	}
 
 	PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())

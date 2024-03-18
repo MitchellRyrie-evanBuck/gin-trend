@@ -2,3 +2,7 @@
 [https://github.com/afl-lxw/gin-trend]2024/03/18 - 22:45:16.010	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
 [https://github.com/afl-lxw/gin-trend]2024/03/18 - 22:45:16.012	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
 [https://github.com/afl-lxw/gin-trend]2024/03/18 - 22:45:16.026	[34minfo[0m	E:/Golang/gin-trend/core/server.go:42	server run success on 	{"address": ":8888"}
+[https://github.com/afl-lxw/gin-trend]2024/03/18 - 23:46:32.309	[34minfo[0m	E:/Golang/gin-trend/initialize/gorm.go:63	register table success
+[https://github.com/afl-lxw/gin-trend]2024/03/18 - 23:46:32.381	[34minfo[0m	E:/Golang/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/03/18 - 23:46:32.383	[34minfo[0m	E:/Golang/gin-trend/initialize/router.go:43	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/03/18 - 23:46:32.395	[34minfo[0m	E:/Golang/gin-trend/core/server.go:42	server run success on 	{"address": ":8888"}
