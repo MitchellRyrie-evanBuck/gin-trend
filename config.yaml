@@ -1,5 +1,10 @@
 # github.com/flipped-aurora/gin-vue-admin/server Global Configuration
 
+
+wechat:
+  asset-token: ""
+  signature: ""
+  token : "trend"
 # jwt configuration
 jwt:
   signing-key: trend-secret-key
