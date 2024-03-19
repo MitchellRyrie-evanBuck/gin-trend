@@ -11,6 +11,8 @@ type BaseSystemAreasAPI struct {
 }
 
 func (t *BaseSystemAreasAPI) GetSystemAreas(c *gin.Context) {
+	key := c.ClientIP()
+	global.TREND_LOG.Info("IP来自", zap.String("ip---->", key))
 	data, err := configSystemUserService.SystemAreasServices(c)
 	if err != nil {
 		global.TREND_LOG.Error("查找失败!", zap.Error(err))
