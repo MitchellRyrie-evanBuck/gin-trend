@@ -9,6 +9,7 @@ import (
 	"github.com/afl-lxw/gin-trend/global"
 	//"github.com/afl-lxw/gin-trend/model/example"
 	"github.com/afl-lxw/gin-trend/model/admin/system"
+	"github.com/afl-lxw/gin-trend/model/app/user"
 
 	"go.uber.org/zap"
 	"gorm.io/gorm"
@@ -35,7 +36,7 @@ func RegisterTables() {
 	db := global.TREND_DB
 	err := db.AutoMigrate(
 		system.SysUser{},
-
+		user.AppUser{},
 		//system.SysApi{},
 		//system.SysUser{},
 		//system.SysBaseMenu{},
