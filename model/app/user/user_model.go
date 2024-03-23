@@ -7,8 +7,8 @@ import (
 
 type AppUser struct {
 	global.TREND_MODEL
-	UUID          ksuid.KSUID `json:"uuid" gorm:"index;comment:用户UUID"`    // 用户UUID
-	Username      string      `json:"userName" gorm:"index;comment:用户登录名"` // 用户登录名
+	UUID          ksuid.KSUID `json:"uuid" gorm:"type:varchar(255);index;comment:用户UUID"` // 用户UUID
+	Username      string      `json:"userName" gorm:"index;comment:用户登录名"`                // 用户登录名
 	Gender        int         `json:"gender" gorm:"default:0;comment: 性别"`
 	Password      string      `json:"-"  gorm:"comment:用户登录密码"`                    // 用户登录密码
 	NickName      string      `json:"nickName" gorm:"default:系统用户;comment:用户昵称"`   // 用户昵称
