@@ -77,6 +77,7 @@ func (l Logger) SetLoggerMiddleware() gin.HandlerFunc {
 	}
 }
 
+// DefaultLogger 默认
 func DefaultLogger() gin.HandlerFunc {
 	return Logger{
 		Print: func(layout LogLayout) {
