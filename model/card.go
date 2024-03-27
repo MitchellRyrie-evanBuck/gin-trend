@@ -14,4 +14,10 @@ type UserCard struct {
 	Address  string      `json:"address" gorm:"comment:地址"`
 	IsDelete bool        `json:"isDelete" gorm:"comment:是否删除"`
 	IsHot    bool        `json:"isHot" gorm:"comment:推荐热门"`
+	Tags     []Tags
+}
+
+type Tags struct {
+	global.TREND_MODEL
+	Name string
 }
