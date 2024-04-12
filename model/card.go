@@ -16,8 +16,3 @@ type UserCard struct {
 	IsHot    bool        `json:"isHot" gorm:"comment:推荐热门"`
 	Tags     []Tags
 }
-
-type Tags struct {
-	global.TREND_MODEL
-	Name string
-}
