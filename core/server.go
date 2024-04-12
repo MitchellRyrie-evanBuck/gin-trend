@@ -38,7 +38,7 @@ func RunServer() {
 
 	time.Sleep(10 * time.Microsecond)
 
-	fmt.Println(banner.Inline("welcome to GO Trend."))
+	fmt.Println(banner.Inline("welcome to GO Trend"))
 	global.TREND_LOG.Info("server run success on ", zap.String("address", address))
 	fmt.Printf(`
 默认自动化文档地址:0.0.0.1%s/swagger/index.html
