@@ -2,11 +2,12 @@ package main
 
 import (
 	"database/sql"
+	"time"
+
 	"github.com/afl-lxw/gin-trend/core"
 	"github.com/afl-lxw/gin-trend/global"
 	"github.com/afl-lxw/gin-trend/initialize"
 	"go.uber.org/zap"
-	"time"
 )
 
 func main() {
@@ -31,7 +32,6 @@ func main() {
 		defer func(db *sql.DB) {
 			err := db.Close()
 			if err != nil {
-
 			}
 		}(db)
 	}
