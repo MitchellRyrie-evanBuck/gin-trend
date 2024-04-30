@@ -23,7 +23,6 @@ func NewJWT() *JWT {
 	}
 }
 
-// NewAccessToken 创建一个新的token
 func (j *JWT) NewAccessToken(claims UserClaims) (string, error) {
 	accessToken := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	tokenString, err := accessToken.SignedString(j.SigningKey)
