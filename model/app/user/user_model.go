@@ -22,6 +22,7 @@ type AppUser struct {
 	Enable        int         `json:"enable" gorm:"default:1;comment:用户是否被冻结 1正常 2冻结"` //用户是否被冻结 1正常 2冻结
 	Encryption    string      `json:"encryption" gorm:"comment: 密码加密"`
 	BusinessCard
+	DescriptionInfo
 }
 
 type BusinessCard struct {
@@ -30,6 +31,23 @@ type BusinessCard struct {
 	WeChat string `json:"wechat" gorm:"comment: 微信名片" `
 	Xhs    string `json:"xhs" gorm:"comment: 小红书名片" `
 	WeBo   string `json:"webo" gorm:"comment: 微博名片" `
+}
+
+type DescriptionInfo struct {
+	Intro                string `json:"u_intro" gorm:"type:varchar(300);default:null;comment:简介"`
+	HeadPortrait         string `json:"u_head_portrait" gorm:"type:varchar(100);comment:头像"`
+	Age                  int    `json:"u_age" gorm:"default:null;comment:年龄"`
+	Constellation        string `json:"u_constellation" gorm:"type:char(6);default:null;comment:星座"`
+	BloodType            string `json:"u_blood_type" gorm:"type:varchar(10);default:null;comment:血型"`
+	SchoolTag            string `json:"u_school_tag" gorm:"type:varchar(50);default:null;comment:毕业学校"`
+	Vocation             string `json:"u_vocation" gorm:"type:varchar(30);default:null;comment:职业"`
+	NationID             int    `json:"u_nation_id" gorm:"default:null;comment:国家ID;foreign_key"`
+	ProvinceID           int    `json:"u_province_id" gorm:"default:null;comment:省份ID;foreign_key"`
+	CityID               int    `json:"u_city_id" gorm:"default:null;comment:城市ID;foreign_key"`
+	FriendshipPolicyID   int    `json:"u_friendship_policy_id" gorm:"default:null;comment:好友策略ID;foreign_key"`
+	UserStateID          int    `json:"u_user_state_id" gorm:"default:null;comment:用户状态ID;foreign_key"`
+	FriendPolicyQuestion string `json:"u_friend_policy_question" gorm:"type:varchar(30);default:null;comment:好友策略问题"`
+	FriendPolicyAnswer   string `json:"u_friend_policy_answer" gorm:"type:varchar(30);default:null;comment:好友策略答案"`
 }
 
 func (AppUser) TableName() string {
