@@ -15,4 +15,5 @@ type UserCard struct {
 	IsDelete bool        `json:"isDelete" gorm:"comment:是否删除"`
 	IsHot    bool        `json:"isHot" gorm:"comment:推荐热门"`
 	Tags     []Tags      `json:"tags" gorm:"comment:标签"`
+	Rules    []string    `json:"rules" gorm:"comment:权限"`
 }
