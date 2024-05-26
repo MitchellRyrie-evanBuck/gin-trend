@@ -2,6 +2,7 @@ package user
 
 import (
 	"github.com/afl-lxw/gin-trend/global"
+	app "github.com/afl-lxw/gin-trend/model/app/config"
 	"github.com/segmentio/ksuid"
 )
 
@@ -23,6 +24,18 @@ type AppUser struct {
 	Encryption    string      `json:"encryption" gorm:"comment: 密码加密"`
 	BusinessCard
 	DescriptionInfo
+	Config    app.AppConfig
+	ConfigID  uint // 这是外键
+	BlackList []BlackList
+	WhiteList []WhiteList
+}
+
+type BlackList struct {
+	UserId string `json:"userId" gorm:"type:varchar(255);index;comment:用户ID"`
+}
+
+type WhiteList struct {
+	UserId string `json:"userId" gorm:"type:varchar(255);index;comment:用户ID"`
 }
 
 type BusinessCard struct {
