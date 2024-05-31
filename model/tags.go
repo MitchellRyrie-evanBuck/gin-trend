@@ -7,6 +7,6 @@ import (
 
 type Tags struct {
 	global.TREND_MODEL
-	Name string
+	Name string `json:"name"`
 	metrics.Description
 }
