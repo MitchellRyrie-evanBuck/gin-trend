@@ -7,5 +7,5 @@ import (
 
 func TestMainFunction(t *testing.T) {
 	// 这里写你的测试代码
-	fmt.Println("main----")
+	fmt.Println("main-")
 }
