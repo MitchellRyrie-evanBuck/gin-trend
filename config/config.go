@@ -1,6 +1,7 @@
 package config
 
 type Server struct {
+	Setting Setting `mapstructure:"setting" json:"setting" yaml:"setting"`
 	WECHAT  WECHAT  `mapstructure:"wechat" json:"wechat" yaml:"wechat"`
 	JWT     JWT     `mapstructure:"jwt" json:"jwt" yaml:"jwt"`
 	Zap     Zap     `mapstructure:"zap" json:"zap" yaml:"zap"`

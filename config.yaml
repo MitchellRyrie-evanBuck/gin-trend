@@ -1,5 +1,7 @@
 # github.com/flipped-aurora/gin-vue-admin/server Global Configuration
 
+setting:
+  name: "Trend"
 
 wechat:
   asset-token: ""
