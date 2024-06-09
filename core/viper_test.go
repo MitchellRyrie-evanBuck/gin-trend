@@ -64,7 +64,6 @@ Trend:
 		t.Fatalf("无法写入临时文件: %v", err)
 	}
 
-	// 调用 Viper 函数，传递临时配置文件路径
 	v := core.Viper(tmpFile)
 	assert.NotNil(t, v)
 	assert.Equal(t, "TestWithPath", global.TREND_CONFIG.Setting.Name)
