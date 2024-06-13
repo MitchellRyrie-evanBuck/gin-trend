@@ -24,10 +24,10 @@ type AppUser struct {
 	Encryption    string      `json:"encryption" gorm:"comment: 密码加密"`
 	BusinessCard
 	DescriptionInfo
-	Config    app.AppConfig
-	ConfigID  uint // 这是外键
-	BlackList []BlackList
-	WhiteList []WhiteList
+	Config   app.AppConfig
+	ConfigID uint // 这是外键
+	//BlackList []BlackList
+	//WhiteList []WhiteList
 }
 
 type BlackList struct {

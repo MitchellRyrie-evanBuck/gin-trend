@@ -1,0 +1,1 @@
+[https://github.com/afl-lxw/gin-trend]2024/06/21 - 23:47:59.309	[31merror[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:61	register table failed	{"error": "invalid field found for struct github.com/afl-lxw/gin-trend/model/app/user.AppUser's field BlackList: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
