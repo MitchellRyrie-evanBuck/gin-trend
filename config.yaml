@@ -3,6 +3,12 @@
 setting:
   name: "Trend"
 
+github:
+  github-user-name: "afl-lxw"
+  github-repo-name: "Mitchell Ryrie"
+  github-access-token:
+  github-api-url: "https://api.github.com/"
+
 wechat:
   asset-token: ""
   signature: ""

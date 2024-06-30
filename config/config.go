@@ -3,6 +3,7 @@ package config
 type Server struct {
 	Setting Setting `mapstructure:"setting" json:"setting" yaml:"setting"`
 	WECHAT  WECHAT  `mapstructure:"wechat" json:"wechat" yaml:"wechat"`
+	GITHUB  GITHUB  `mapstructure:"github" json:"github" yaml:"github"`
 	JWT     JWT     `mapstructure:"jwt" json:"jwt" yaml:"jwt"`
 	Zap     Zap     `mapstructure:"zap" json:"zap" yaml:"zap"`
 	Redis   Redis   `mapstructure:"redis" json:"redis" yaml:"redis"`
