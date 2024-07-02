@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"github.com/afl-lxw/gin-trend/api/app/v1/auth"
 	"github.com/afl-lxw/gin-trend/api/app/v1/home_views"
 	"github.com/afl-lxw/gin-trend/api/app/v1/search"
 	"github.com/afl-lxw/gin-trend/api/app/v1/system"
@@ -14,6 +15,7 @@ type AppV1ApiGroup struct {
 	HomeViewGroup  home_views.ApiGroup
 	SearchGroup    search.ApiGroup
 	WeChat         weChat.ApiGroup
+	AuthApiGroup   auth.ApiGroup
 }
 
 var ApiGroupAdmin = new(AppV1ApiGroup)

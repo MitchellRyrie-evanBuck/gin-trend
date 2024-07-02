@@ -48,6 +48,7 @@ func Routers() *gin.Engine {
 	//----------------------------APP---------------------------------------------
 	appSystemRouter := router.RouteGroupApp.App.System.BaseSystemRouter
 	appWeChatRouter := router.RouteGroupApp.App.Wechat.BaseWeChatRouter
+	appAuthRouter := router.RouteGroupApp.App.Auth.BaseAuthRouter
 
 	//----------------------------------------------------------------------------
 
@@ -65,6 +66,7 @@ func Routers() *gin.Engine {
 		// -----------------------------------------
 		appSystemRouter.InitBaseRouter(PublicGroup)
 		appWeChatRouter.InitBaseRouter(PublicGroup)
+		appAuthRouter.InitBaseRouter(PublicGroup)
 	}
 
 	PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
