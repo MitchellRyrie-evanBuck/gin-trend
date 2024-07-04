@@ -3,6 +3,8 @@ package user
 import (
 	"github.com/afl-lxw/gin-trend/global"
 	app "github.com/afl-lxw/gin-trend/model/app/config"
+	note "github.com/afl-lxw/gin-trend/model/app/note"
+
 	"github.com/segmentio/ksuid"
 )
 
@@ -28,6 +30,7 @@ type AppUser struct {
 	ConfigID uint // 这是外键
 	//BlackList []BlackList
 	//WhiteList []WhiteList
+	Notes []note.AppNote `gorm:"foreignKey:UserID"` // 一对多关系，一个用户可以有多个笔记
 }
 
 type BlackList struct {
