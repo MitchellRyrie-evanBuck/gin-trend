@@ -91,4 +91,5 @@ func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) {
 }
 
 func (t *BaseAppUser) Register(c *gin.Context) {
+	//validators.ValidateCreateUser()
 }
