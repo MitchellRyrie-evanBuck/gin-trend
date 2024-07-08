@@ -1,0 +1,10 @@
+.idea
+*.log
+/bin
+!/bin/.gitignore
+dist/
+.vscode
+quick_lint.sh
+.env
+vendor
+go.sum
