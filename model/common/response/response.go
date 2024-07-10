@@ -17,13 +17,14 @@ const (
 	SUCCESS = 0
 )
 
-func Result(code int, data interface{}, msg string, c *gin.Context) {
+func Result(code int, data interface{}, msg string, c *gin.Context) error {
 	// 开始时间
 	c.JSON(http.StatusOK, Response{
 		code,
 		data,
 		msg,
 	})
+	return nil
 }
 
 func Ok(c *gin.Context) {
@@ -50,6 +51,6 @@ func FailWithMessage(message string, c *gin.Context) {
 	Result(ERROR, map[string]interface{}{}, message, c)
 }
 
-func FailWithDetailed(data interface{}, message string, c *gin.Context) {
-	Result(ERROR, data, message, c)
+func FailWithDetailed(data interface{}, message string, c *gin.Context) error {
+	return Result(ERROR, data, message, c)
 }

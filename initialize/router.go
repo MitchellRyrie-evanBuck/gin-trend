@@ -4,8 +4,11 @@ import (
 	"github.com/afl-lxw/gin-trend/docs"
 	"github.com/afl-lxw/gin-trend/global"
 	"github.com/afl-lxw/gin-trend/middleware"
+	"github.com/afl-lxw/gin-trend/model/common/response"
 	"github.com/afl-lxw/gin-trend/router"
+	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/cast"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"net/http"
@@ -18,7 +21,11 @@ func Routers() *gin.Engine {
 	}
 
 	Router := gin.New()
-	Router.Use(gin.Recovery())
+	Router.Use(gin.Recovery(), middleware.NoCache, middleware.Options, gzip.Gzip(gzip.DefaultCompression), gin.CustomRecovery(func(c *gin.Context, err any) {
+		_ = response.FailWithDetailed(nil, cast.ToString(err), c)
+		c.Abort()
+		return
+	}))
 	if global.TREND_CONFIG.System.Env != "public" {
 		Router.Use(gin.Logger())
 	}
