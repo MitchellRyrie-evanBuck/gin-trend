@@ -5,11 +5,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func (b *CapApi) Login(c *gin.Context) {
+func (b *CapApi) Login(c *gin.Context) error {
 	println("进入接口")
 	err := configSystemUserService.HandleSystemUser()
 	if err != nil {
 
 	}
-	response.Ok(c)
+	return response.Ok(c)
 }

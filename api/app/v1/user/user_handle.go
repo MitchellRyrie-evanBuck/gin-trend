@@ -17,18 +17,19 @@ type BaseAppUser struct {
 }
 
 // UserLogin 微信授权
-func (t *BaseAppUser) UserLogin(c *gin.Context) {
+func (t *BaseAppUser) UserLogin(c *gin.Context) error {
 	var l userReq.Login
 	err := c.ShouldBindJSON(&l)
 	key := c.ClientIP()
 	if err != nil {
-		response.FailWithMessage(err.Error(), c)
-		return
+		return response.FailWithMessage(err.Error(), c)
+
 	}
 	fmt.Println("==============", key)
+	return nil
 }
 
-func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) {
+func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) error {
 	j := &utils.JWT{SigningKey: []byte(global.TREND_CONFIG.JWT.SigningKey)} // 唯一签名
 
 	claims := j.CreateClaims(utils.BaseClaims{
@@ -41,18 +42,18 @@ func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) {
 	token, err := j.NewAccessToken(claims)
 	if err != nil {
 		global.TREND_LOG.Error("获取token失败!", zap.Error(err))
-		response.FailWithMessage("获取token失败", c)
-		return
+		return response.FailWithMessage("获取token失败", c)
+
 	}
 
 	if !global.TREND_CONFIG.System.UseMultipoint {
 		utils.SetToken(c, token, int(claims.RegisteredClaims.ExpiresAt.Unix()-time.Now().Unix()))
-		response.OkWithDetailed(systemRes.LoginResponse{
+		return response.OkWithDetailed(systemRes.LoginResponse{
 			User:      user,
 			Token:     token,
 			ExpiresAt: claims.RegisteredClaims.ExpiresAt.Unix() * 1000,
 		}, "登录成功", c)
-		return
+
 	}
 
 	//if jwtStr, err := jwtService.GetRedisJWT(user.Username); err == redis.Nil {
@@ -88,6 +89,7 @@ func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) {
 	//		ExpiresAt: claims.RegisteredClaims.ExpiresAt.Unix() * 1000,
 	//	}, "登录成功", c)
 	//}
+	return nil
 }
 
 func (t *BaseAppUser) Register(c *gin.Context) {

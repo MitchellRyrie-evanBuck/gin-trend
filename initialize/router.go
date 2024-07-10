@@ -6,12 +6,15 @@ import (
 	"github.com/afl-lxw/gin-trend/middleware"
 	"github.com/afl-lxw/gin-trend/model/common/response"
 	"github.com/afl-lxw/gin-trend/router"
+	"github.com/didip/tollbooth"
+	"github.com/didip/tollbooth/limiter"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/cast"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"net/http"
+	"time"
 )
 
 func Routers() *gin.Engine {
@@ -24,8 +27,10 @@ func Routers() *gin.Engine {
 	Router.Use(gin.Recovery(), middleware.NoCache, middleware.Options, gzip.Gzip(gzip.DefaultCompression), gin.CustomRecovery(func(c *gin.Context, err any) {
 		_ = response.FailWithDetailed(nil, cast.ToString(err), c)
 		c.Abort()
-		return
 	}))
+	Router.Use(middleware.LimitHandler(tollbooth.NewLimiter(10, &limiter.ExpirableOptions{
+		DefaultExpirationTTL: time.Second,
+	})))
 	if global.TREND_CONFIG.System.Env != "public" {
 		Router.Use(gin.Logger())
 	}
