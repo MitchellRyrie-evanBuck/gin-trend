@@ -29,6 +29,7 @@ func (t *BaseAppUser) UserLogin(c *gin.Context) error {
 	return nil
 }
 
+// TokenNext token
 func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) error {
 	j := &utils.JWT{SigningKey: []byte(global.TREND_CONFIG.JWT.SigningKey)} // 唯一签名
 
