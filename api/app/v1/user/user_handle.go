@@ -25,7 +25,7 @@ func (t *BaseAppUser) UserLogin(c *gin.Context) error {
 		return response.FailWithMessage(err.Error(), c)
 
 	}
-	fmt.Println("==============", key)
+	fmt.Println("====", key)
 	return nil
 }
 
