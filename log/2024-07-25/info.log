@@ -1,0 +1,6 @@
+[https://github.com/afl-lxw/gin-trend]2024/07/25 - 00:01:52.471	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:69	register table success
+[https://github.com/afl-lxw/gin-trend]2024/07/25 - 00:01:52.563	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/07/25 - 00:01:52.563	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/07/25 - 00:01:52.564	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/07/25 - 00:06:08.901	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/api/app/v1/system/sys_areas.go:15	IP来自	{"ip---->": "127.0.0.1"}
+[https://github.com/afl-lxw/gin-trend]2024/07/25 - 00:12:26.253	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/api/app/v1/system/sys_areas.go:15	IP来自	{"ip---->": "127.0.0.1"}

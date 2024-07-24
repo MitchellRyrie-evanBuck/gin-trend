@@ -2,6 +2,7 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/afl-lxw/gin-trend/model/app/template"
 	"github.com/afl-lxw/gin-trend/utils"
 	"log"
 	"os"
@@ -39,6 +40,7 @@ func RegisterTables() {
 		system.SysUser{},
 		user.AppUser{},
 		note.AppNote{},
+		template.AppTemplate{},
 
 		//system.SysApi{},
 		//system.SysUser{},
