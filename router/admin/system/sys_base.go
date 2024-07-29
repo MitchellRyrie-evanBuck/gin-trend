@@ -12,7 +12,7 @@ func (s *BaseRouter) InitBaseRouter(Router *gin.RouterGroup) (R gin.IRoutes) {
 	baseApi := api.InterfaceConfig.Admin.SystemApiGroup.CapApi
 	{
 		baseRouter.POST("login", baseApi.Login)
-		baseRouter.POST("captcha", baseApi.Captcha)
+		baseRouter.GET("captcha", baseApi.Captcha)
 	}
 	return baseRouter
 }

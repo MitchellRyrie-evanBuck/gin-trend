@@ -1,0 +1,13 @@
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 16:22:00.996	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:69	register table success
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 16:22:01.084	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 16:22:01.084	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 16:22:01.085	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:24:58.578	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/api/app/v1/system/sys_areas.go:15	IP来自	{"ip---->": "127.0.0.1"}
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:31:42.279	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:69	register table success
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:31:42.369	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:31:42.370	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:31:42.370	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:32:17.975	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:69	register table success
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:32:18.064	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:32:18.064	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/07/29 - 23:32:18.065	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}

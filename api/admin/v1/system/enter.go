@@ -10,5 +10,6 @@ type ApiGroup struct {
 }
 
 var (
-	configSystemUserService = service.ExportServiceConfig.Admin.SystemServiceGroup.BaseSystemUserConfigService
+	configSystemUserService    = service.ExportServiceConfig.Admin.SystemServiceGroup.BaseSystemUserConfigService
+	configSystemCaptchaService = service.ExportServiceConfig.Admin.SystemServiceGroup.BaseSystemCaptchaService
 )
