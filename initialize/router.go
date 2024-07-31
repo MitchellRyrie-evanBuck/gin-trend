@@ -57,6 +57,7 @@ func Routers() *gin.Engine {
 	//----------------------------ADMIN---------------------------------------------
 	adminSystemRouter := router.RouteGroupApp.Admin.System.BaseRouter
 	adminUserRouter := router.RouteGroupApp.Admin.User
+
 	//----------------------------APP---------------------------------------------
 	appSystemRouter := router.RouteGroupApp.App.System.BaseSystemRouter
 	appWeChatRouter := router.RouteGroupApp.App.Wechat.BaseWeChatRouter

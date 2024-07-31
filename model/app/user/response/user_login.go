@@ -3,11 +3,11 @@ package response
 import "github.com/afl-lxw/gin-trend/model/admin/system"
 
 type SysUserResponse struct {
-	User system.SysUser `json:"user"`
+	User system.AdminSysUser `json:"user"`
 }
 
 type LoginResponse struct {
-	User      system.SysUser `json:"user"`
-	Token     string         `json:"token"`
-	ExpiresAt int64          `json:"expiresAt"`
+	User      system.AdminSysUser `json:"user"`
+	Token     string              `json:"token"`
+	ExpiresAt int64               `json:"expiresAt"`
 }

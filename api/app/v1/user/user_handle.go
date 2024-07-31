@@ -30,7 +30,7 @@ func (t *BaseAppUser) UserLogin(c *gin.Context) error {
 }
 
 // TokenNext token
-func (t *BaseAppUser) TokenNext(c *gin.Context, user system.SysUser) error {
+func (t *BaseAppUser) TokenNext(c *gin.Context, user system.AdminSysUser) error {
 	j := &utils.JWT{SigningKey: []byte(global.TREND_CONFIG.JWT.SigningKey)} // 唯一签名
 
 	claims := j.CreateClaims(utils.BaseClaims{

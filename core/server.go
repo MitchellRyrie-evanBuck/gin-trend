@@ -40,9 +40,7 @@ func RunServer() {
 
 	fmt.Println(banner.Inline("welcome to GO Trend"))
 	global.TREND_LOG.Info("server run success on ", zap.String("address", address))
-	fmt.Printf(`
-默认自动化文档地址:0.0.0.1%s/swagger/index.html
-开始运行 运行地址为 0.0.0.1%s 
+	fmt.Printf(`默认自动化文档地址:%s/swagger/index.html /n开始运行 运行地址为%s 
 	`,
 		address, address)
 	global.TREND_LOG.Error(s.ListenAndServe().Error())
