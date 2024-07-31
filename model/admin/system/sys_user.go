@@ -5,7 +5,7 @@ import (
 	"github.com/segmentio/ksuid"
 )
 
-type SysUser struct {
+type AdminSysUser struct {
 	global.TREND_MODEL
 	UUID        ksuid.KSUID `json:"uuid" gorm:"type:varchar(255);index:idx_uuid;comment:用户UUID"`                          // 用户UUID
 	Username    string      `json:"userName" gorm:"index;comment:用户登录名"`                                                  // 用户登录名
@@ -23,6 +23,6 @@ type SysUser struct {
 	Enable int    `json:"enable" gorm:"default:1;comment:用户是否被冻结 1正常 2冻结"` //用户是否被冻结 1正常 2冻结
 }
 
-func (SysUser) TableName() string {
+func (AdminSysUser) TableName() string {
 	return "admin_sys_users"
 }

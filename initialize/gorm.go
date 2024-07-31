@@ -2,6 +2,8 @@ package initialize
 
 import (
 	"fmt"
+	"github.com/afl-lxw/gin-trend/model/admin/token"
+	"github.com/afl-lxw/gin-trend/model/app/message"
 	"github.com/afl-lxw/gin-trend/model/app/template"
 	"github.com/afl-lxw/gin-trend/utils"
 	"log"
@@ -37,11 +39,12 @@ func Gorm() *gorm.DB {
 func RegisterTables() {
 	db := global.TREND_DB
 	err := db.AutoMigrate(
-		system.SysUser{},
+		system.AdminSysUser{},
 		user.AppUser{},
 		note.AppNote{},
 		template.AppTemplate{},
-
+		token.AppToken{},
+		message.AppMessage{},
 		//system.SysApi{},
 		//system.SysUser{},
 		//system.SysBaseMenu{},
