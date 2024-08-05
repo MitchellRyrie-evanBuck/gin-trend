@@ -84,7 +84,7 @@ func Routers() *gin.Engine {
 
 	PrivateGroup.Use(middleware.JWTAuth()).Use(middleware.CasbinHandler())
 	{
-		adminUserRouter.InitBaseRouter(PrivateGroup)
+		adminUserRouter.InitBaseRouter(PublicGroup)
 		// -----------------------------------------
 	}
 	return Router

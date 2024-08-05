@@ -1,0 +1,20 @@
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:03:52.063	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:72	register table success
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:03:52.153	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:03:52.154	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:03:52.154	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:04:44.571	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:72	register table success
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:04:44.661	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:04:44.661	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:04:44.662	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:08:25.657	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:72	register table success
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:08:25.754	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:08:25.754	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 00:08:25.754	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:34:24.360	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:72	register table success
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:34:24.454	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:34:24.456	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:34:24.457	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:35:14.620	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/gorm.go:72	register table success
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:35:14.719	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/redis.go:24	redis connect ping response:	{"pong": "PONG"}
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:35:14.723	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/initialize/router.go:55	register swagger handler
+[https://github.com/afl-lxw/gin-trend]2024/08/03 - 23:35:14.724	[34minfo[0m	/Users/laf/Documents/Go/gin-trend/core/server.go:42	server run success on 	{"address": "0.0.0.0:8888"}
