@@ -5,6 +5,7 @@ import (
 	"github.com/segmentio/ksuid"
 )
 
+// AdminSysUser 后台系统用户表
 type AdminSysUser struct {
 	global.TREND_MODEL
 	UUID        ksuid.KSUID `json:"uuid" gorm:"type:varchar(255);index:idx_uuid;comment:用户UUID"`                          // 用户UUID
