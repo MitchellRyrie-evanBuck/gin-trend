@@ -3,6 +3,7 @@ package note
 type BaseNote struct {
 }
 
+// GetNoteList note列表
 func (t *BaseNote) GetNoteList() {
 
 }
