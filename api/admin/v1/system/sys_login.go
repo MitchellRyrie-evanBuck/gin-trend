@@ -9,7 +9,7 @@ import (
 
 func (b *CapApi) Login(c *gin.Context) {
 	key := c.ClientIP()
-	global.TREND_LOG.Info("IP来自", zap.String("ip---->", key))
+	global.TREND_LOG.Info("IP来自", zap.String("ip--------->", key))
 	err := configSystemUserService.HandleSystemUser()
 	if err != nil {
 
