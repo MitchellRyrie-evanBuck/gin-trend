@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	// 统一设置时区.
+	// 统一设置时区..
 	location, err := time.LoadLocation("Asia/Shanghai")
 	if err != nil {
 		panic(err)
